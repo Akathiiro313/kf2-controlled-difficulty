@@ -58,6 +58,14 @@ If set to true albino crawlers(Gas Crawlers) will be permitted to spawn if set i
 *Description:*
 If set to true Gorefiends will be permitted to spawn if set in the cycle, and if set to false they will be replaced with another zed should they exist in the spawncycle. The general function of this option is similar to the way albino alpha setting works.
 
+### !cdalbinostalkers <true|false>
+*Description:*
+If set to true part of EDARs(stalkers' part) will be permitted to spawn if set in the cycle, and if set to false they will be replaced with stalkers should they exist in the spawncycle, it only work when spawncycle using ST* to spawn EDARs. You have to set both !cdalbinostalkers and !cdalbinohusks to false to completely disable EDARs. The general function of this option is similar to the way albino alpha setting works.
+
+### !cdalbinohusks <true|false>
+*Description:*
+If set to true part of EDARs(husks' part) will be permitted to spawn if set in the cycle, and if set to false they will be replaced with husks should they exist in the spawncycle, it only work when spawncycle using HU* to spawn EDARs. You have to set both !cdalbinostalkers and !cdalbinohusks to false to completely disable EDARs. The general function of this option is similar to the way albino alpha setting works.
+
 ### !cdallhpfakes <int>
 *Shorthand:* !cdahpf
 
@@ -199,9 +207,13 @@ The list of available SpawnCycle Presets included with this version of CD is as 
 * nam_pro_v5_plus
 * nam_semi_pro
 * nam_semi_pro_v2
+* pubs_v1
 * rd_kta
 * rd_odt
 * rd_sam
+* ts_mig_v1
+* ts_mig_v1_p
+* ts_lk313_stg
 
 ### !cdspawnmod <ini|bilinear;|float>
 *Shorthand:* !cdsm
