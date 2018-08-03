@@ -4,7 +4,7 @@ A modification by Tiger of blackout's Controlled difficulty mod for Tripwire int
 This mutator offers precise control over the game's difficulty, including configurations much harder than 
 Tripwire's top-end Hell on Earth difficulty can offer.
 
-**Tiger's Build** https://steamcommunity.com/sharedfiles/filedetails/?id=1343978019
+**DarkDarkington's Build** https://steamcommunity.com/sharedfiles/filedetails/?id=1412883748
 **Blackout's CD** http://steamcommunity.com/sharedfiles/filedetails/?id=738484519
 
 ## Quick Start
