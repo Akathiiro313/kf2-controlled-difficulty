@@ -856,6 +856,32 @@ function GetSpawnListFromSquad(byte SquadIdx, out array< KFAISpawnSquad > Squads
 		                 AISpawnList );
 	}
 
+	if ( !AlbinoStalkersBool )
+	{
+		`cdlog("AlbinoStalkers="$AlbinoStalkersBool$": scanning AISpawnList of length "$AISpawnList.Length$" at squadidx "$SquadIdx, bLogControlledDifficulty);
+
+		// Replace all standard stalker classes with forced-regular stalkers
+		MatchClasses.Length = 2;
+		MatchClasses[0] = AIClassList[AT_Stalker];
+		MatchClasses[1] = class'ControlledDifficulty.CD_Pawn_ZedStalker_Special';
+		ReplaceZedClass( MatchClasses,
+		                 class'ControlledDifficulty.CD_Pawn_ZedStalker_Regular',
+		                 AISpawnList );
+	}
+	
+	if ( !AlbinoHusksBool )
+	{
+		`cdlog("AlbinoHusks="$AlbinoHusksBool$": scanning AISpawnList of length "$AISpawnList.Length$" at squadidx "$SquadIdx, bLogControlledDifficulty);
+
+		// Replace all standard husk classes with forced-regular husks
+		MatchClasses.Length = 2;
+		MatchClasses[0] = AIClassList[AT_Husk];
+		MatchClasses[1] = class'ControlledDifficulty.CD_Pawn_ZedHusk_Special';
+		ReplaceZedClass( MatchClasses,
+		                 class'ControlledDifficulty.CD_Pawn_ZedHusk_Regular',
+		                 AISpawnList );
+	}
+	
 	if ( !FleshpoundRageSpawnsBool )
 	{
 		`cdlog("FleshpoundRageSpawns="$FleshpoundRageSpawnsBool$": scanning AISpawnList of length "$AISpawnList.Length$" at squadidx "$SquadIdx, bLogControlledDifficulty);
