@@ -226,6 +226,18 @@ Controls whether albino gorefasts can spawn.
 
 See AlbinoAlphas for details about exactly how this works.
 
+#### AlbinoStalkers
+
+Controls whether EDARs(on stalkers' part) can spawn.
+
+See AlbinoAlphas for details about exactly how this works.
+
+#### AlbinoHusks
+
+Controls whether EDARs(on husks' part) can spawn.
+
+See AlbinoAlphas for details about exactly how this works.
+
 #### Boss
 
 Optionally controls which boss spawns, if and when the boss wave arrives.
