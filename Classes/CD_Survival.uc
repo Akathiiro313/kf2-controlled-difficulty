@@ -246,6 +246,22 @@ var bool AlbinoAlphasBool;
 var config string AlbinoGorefasts;
 var bool AlbinoGorefastsBool;
 
+// #### AlbinoStalkers
+//
+// Controls whether albino stalkers can spawn.
+//
+// See AlbinoAlphas for details about exactly how this works.
+var config string AlbinoStalkers;
+var bool AlbinoStalkersBool;
+
+// #### AlbinoHusks
+//
+// Controls whether albino husks can spawn.
+//
+// See AlbinoAlphas for details about exactly how this works.
+var config string Albinohusks;
+var bool AlbinoHusksBool;
+
 // #### Boss
 //
 // Optionally controls which boss spawns, if and when the boss wave arrives.
@@ -553,6 +569,8 @@ var array<CD_DynamicSetting> DynamicSettings;
 var CD_BasicSetting AlbinoAlphasSetting;
 var CD_BasicSetting AlbinoCrawlersSetting;
 var CD_BasicSetting AlbinoGorefastsSetting;
+var CD_BasicSetting AlbinoStalkersSetting;
+var CD_BasicSetting AlbinoHusksSetting;
 var CD_BasicSetting AutoPauseSetting;
 var CD_BasicSetting BossSetting;
 var CD_BasicSetting CountHeadshotsPerPelletSetting;
@@ -680,6 +698,12 @@ private function SetupBasicSettings()
 
 	AlbinoGorefastsSetting = new(self) class'CD_BasicSetting_AlbinoGorefasts';
 	RegisterBasicSetting( AlbinoGorefastsSetting );
+	
+	AlbinoStalkersSetting = new(self) class'CD_BasicSetting_AlbinoStalkers';
+	RegisterBasicSetting( AlbinoStalkersSetting );
+	
+	AlbinoHusksSetting = new(self) class'CD_BasicSetting_AlbinoHusks';
+	RegisterBasicSetting( AlbinoHusksSetting );
 	
 	AutoPauseSetting = new(self) class'CD_BasicSetting_AutoPause';
 	RegisterBasicSetting( AutoPauseSetting );
@@ -1548,6 +1572,10 @@ event Broadcast(Actor Sender, coerce string Msg, optional name Type)
 		else if (Msg == "!cdmikepls" )													// this doesn't need an actor either -The Real LazyTiger
 		{
 			BroadcastCDEcho("GET SHIT ON");
+		}
+		else if (Msg == "!cdmig" )
+		{
+			BroadcastCDEcho("Machine is GOD!");
 		}
 		else
 		{
