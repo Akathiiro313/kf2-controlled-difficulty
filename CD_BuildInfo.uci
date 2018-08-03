@@ -1,4 +1,4 @@
-`define CD_COMMIT_HASH "TIGER"
-`define CD_AUTHOR_TIMESTAMP "2018-05-17"
-`define CD_AUTHOR "Blackout & Tiger"
+`define CD_COMMIT_HASH "Akathiiro313"
+`define CD_AUTHOR_TIMESTAMP "2018-08-03"
+`define CD_AUTHOR "Blackout & Tiger & modified by Akathiiro313"
 `define CD_BUILD_Type "CUSTOM"
