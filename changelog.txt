@@ -1,7 +1,19 @@
-Updates post Tiger
+Akathiiro313's Build - 2018-08-03
 ---------------------------------
-- added mig_v1 to spawn cycle presets
-- made text color purple, this is likely to change in the future
+- Now supports which speific EDARs to spawn in custom spawncycle, you can use DE(or TR), DR(or BO), DL(or BA) to spawn speific Trapper, Boomer, and Blaster in your own spawncycle.
+- Adjust spawncycle presets so that basic_heavy and basic_light now supports both short game and long game.
+
+
+Akathiiro313's Build - 2018-07-27
+---------------------------------
+- Fixed breakage caused by v1065 patch so that albino control works again.
+- Added chat command to control spawn of the EDARs since they are a kind of albino zeds now, !cdalbinostalkers and !cdalbinohusks are used to control EDARs' spawn.
+- Now supports EDARs in custom spawncycle, you can use ST* or HU* in your spawncycle to spawn EDARs.
+- Added spawncycle preset ts_mig_v1
+- Added spawncycle preset ts_mig_v1_p
+- Added spawncycle preset ts_lk313_stg
+- Text color changed to pink.
+- Added command !cdmig.
 
 
 Tiger's Build - 2018-05-17
