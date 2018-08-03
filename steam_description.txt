@@ -1,108 +1,49 @@
-Controlled Difficulty - Tiger's Build
-Last Updated: May 17th, 2018
-Last Tested: v1065
-Based on [url=http://steamcommunity.com/sharedfiles/filedetails/?id=738484519]Blackout's Controlled Difficulty[/url]
+[b]Controlled Difficulty - Akathiiro313's Build[/b]
+[b]Updated:[/b] Aug 3rd, 2018
+[b]Last Tested:[/b] v1068
 
-[h1][b]IMPORTANT NOTE[/b][/h1]
-This is the last offical update of my branch of CD. Tripwire has offically decided that game balance doesn't matter to them and I've decided that maintaining a mutator for their unbalanced game is not worth the effort. This branch of CD like the original is open source and can be forked and maintained by someone else if they so choose. It's also written with the ability to be  merged into Blackout's main branch in mind if he so chooses. Never-the-less, this build currently works with both the published 1064 and the beta 1065, it however will not be updated for future versions of KillingFloor2.
 
-[h1][b]Summary[/b][/h1]
-This custom build takes everything you know and love about Blackout's Controlled Difficulty and adds some additional features, perhaps the most notable of which is the ready system and autopause which allows players to ready up eliminating the need to have someone on server with CDAUTH_WRITE permissions to pause and unpause between waves. This should also help eliminate or reduce erroneous unpauses that can cause wipes. Once every non-spectator is readied up the ready system will automatically unpause the trader and resume the countdown. In the event of something forgotten- If there are more than 5 seconds remaining on the countdown (or if you're playing in solo mode) players can un-ready in order pause the countdown again.
+[h1]Introduction[/h1]
 
-Combined with the ability to set TraderTime in your config (I recommend a low number, like 8 or 12 seconds) this should also make unmanaged pausing/unpausing available to public CD servers while also making it easier for managed CD groups.
+This version of CD is based on Tiger' Build, and origins from [url=http://steamcommunity.com/sharedfiles/filedetails/?id=738484519]Blackout's Controlled Difficulty[/url]
+Used the source code from [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1412883748]DarkDarkington's Controlled Difficulty[/url]
+I don't own most of the credit of this version, it's Blackout and Tiger who create this beloved mutator, and DarkDarkington who keeps the source code of Tiger' Build while keeps CD going.
+I only fix some severe breakages caused by the V1065 patch about the albino zeds control and add some additional features.
+I don't have much experience in script mod, so in any event of future update that severely breaks CD, i might not be able to maintain this mutator running. This version of CD is made to in memory of those glory days that CD brought us.
 
-[h1][b]Additional Features[/b][/h1]
-In addition to everything offered by Blackout's Controlled Difficulty this fork includes the following additions and changes:
+
+[h1]Features[/h1]
+
+It keeps everything offered by Blackout's Controlled Difficulty and Tiger's improvement in his build with DarkDarkington's changes(except for color).You can find the features of Tiger's version of CD in DarkDarkington 's CD in the link above.
+
+
+[b]My personal changes:[/b]
 
 [list]
-[*] CD Chatbox output is now in ORANGE (blame Kore for giving me the idea)
-[*] asl_v1 spawncycle added to available presets
-[*] nam_pro_v5_plus spawncycle added to available presets
-[*] gso_v1 spawncycle added to available presets
-[*] fixes BossHPFakes not applying to Abomination and KingFleshpound
-[*] BossHPFakes are now listed in cdinfo output during and after bosswave
-[*] AutoPause
-    A simple feature that automagically pauses the trader at the end of each wave
-    [list]
-    [*] !cdautopause (shorthand: !cdap) chat command to enable or disable autopause
-    [*] config option to enable or disable AutoPause
-    [/list]
-[*] Ready System
-    Manages player ready/unready states and automates unpausing of trader time.
-    [list]
-    [*] !cdready (shorthand: !cdr) chat command to ready up for the next wave
-    [*] !cdunready (shorthand: !cdur) chat command to unready
-    [*] !cdusereadysystem (shorthand: !cdurs) chat command to turn the ready system on and off
-    [*] config option to turn the ready system on and off
-    [/list]
-[*] numerous !cdwho chat command functionality fixes and additions:
-    [list]
-    [*] no longer counts faked players as spectators
-    [*] no longer lists real players as spectators during trader time
-    [*] now correctly lists spectators prior to the start of wave 1
-    [*] now lists who is readied up and who is not during trader time (for use with ready system)
-    [/list]
-[*] !cdMyStats chat command
-    Displays a list of your current stats for the match including the following:
-    [list]
-    [*] Dosh Earned
-    [*] Large Kills
-    [*] Healing Given
-    [*] Healing Received
-    [*] Damage Dealt
-    [*] Damage Taken
-    [*] Shots Fired
-    [*] Shots Hit
-    [*] Accuracy (Measured as % of shots hit)
-    [*] Headshots
-    [/list]
-[*] !cdAllHpFakes chat command
-    allows players with CDAUTH_WRITE permissions to set HP fakes for Trash, Scrakes, Fleshpounds, and Boss to the same value all at once.
-[*] !cdWaveEndSummaries (Shorthand: !cdwes) chat command
-    toggles the display of wave end spawn summaries. Also available as a config option.
-[*] !cdstats command to display a sorted list of a specified stat for all connected players- Supported stats are:
-[list]
-[*] Accuracy
-[*] Dosh Earned
-[*] DamageDealt
-[*] DamageTaken
-[*] HealsGiven
-[*] HealsReceived
-[*] Headshots
-[*] HeadshotAccuracy
-[*] Large Kills
-[*] ShotsHit
-[*] ShotsFired
-[/list]
-[*] Added a feature that unobtrusively dumps stats for all players at the end of a match to the chatlog so that it can readily be parsed by tools like MagickedAdmin into Key:Value pairs.
+    [*]Fixed breakage caused by v1065 patch so that albino control works again.(You can use CD's chat command to disable or enable albino zeds again)
+    [*]Added chat command to control spawn of the EDARs since they are a kind of albino zeds now.(!cdalbinostalkers and !cdalbinohusks are used to control EDARs' spawn) But you have to disable both albino stalkers and husks to prevent them from spawning if there are EDARs in your spawncycle.(Further changes might convert two commands to one)
+    [*]Now supports speific EDAR in custom spawncycle, you can either use the specified names to spawn specific EDAR but you can not disable them via chat command, or you can use ST* and HU* to spawn random EDARs while you can disable them via chat command.
+For specified EDAR names, the following are accpected:
+* DARE(MP), DE, TR, Trapper
+* DARR(OCKET), DR, BO, Boomer
+* DARL(ASER), DL, BA, Blaster
+    [*]Added spawncycle preset ts_mig_v1 (proabaly known as mig_v1) designed by Machine and coded by me. It's designed to have approximatly the same ammout of large zeds as dtf_v1 but armed with many albino zeds and more annoying zeds squad combos.
+    [*]Added spawncycle preset ts_mig_v1_p also designed by Machine and coded by me. It's the prototype of mig_v1 but I think it's a pity to dump it so I add it as a separate spawncycle, wave 8-10 was more brutal compared to mig_v1 and perhaps a little unbanlanced due to wave 10.
+    [*]Added spawncycle preset ts_lk313_stg designed by [url=https://steamcommunity.com/id/LKarrie]LKarrie[/url] and modified by me. It has more large zeds than nam_pro_v5 but less than dtf_v1 and armed with few albino zeds and QPs.
+    [*]Text color changed to pink. (Blame Machine for this 'cause he likes it)
+    [*]Added command !cdmig. (Thank Machine to be one of the best KF2 player)
+    [*]Adjusted spawncycle preset so that every preset designed for solo now supports both short game and long game.
 [/list]
 
-It should be noted that if someone who is not readied up leaves for whatever reason (Network disconnect, they were kicked, client crash, etc) and everyone left is readied up- the trader will not automatically unpause- this is an intended feature meant to safe-guard against unexpected problems that may arise. If that player isn't coming back you can trigger the ready-check again simply by having one player unready then ready back up.
 
-[h1][b]Links and Downloads:[/b][/h1]
-[h1]Tiger's Custom Build[/h1]
-[url=drive.google.com/open?id=1qUCDxh2BJjkOXcnBC-dSMil_nV6sCQbq]Alternate Download[/url]
-[url=github.com/LazyT1ger/kf2-controlled-difficulty/]Source on Git-Hub[/url]
-[h1]Blackout's Controlled Difficulty[/h1]
-[url=steamcommunity.com/sharedfiles/filedetails/?id=738484519]Workshop Page[/url]
-[url=github.com/notblackout/kf2-controlled-difficulty]Source on Git-Hub[/url]
+[h1]Github References[/h1]
 
-[h1][b]Information:[/b][/h1]
-[url=steamcommunity.com/workshop/filedetails/discussion/1343978019/1696044439572613808/]FAQ[/url]
-[url=steamcommunity.com/workshop/filedetails/discussion/1343978019/1697169163397700871/]List of Chat Commands[/url]
-[url=steamcommunity.com/workshop/filedetails/discussion/1343978019/1696043806554396099/]Guides and Translations[/url]
-[url=steamcommunity.com/workshop/filedetails/discussion/1343978019/1698294337789841213/]Bug Reports[/url]
+I don't have a github account so perhaps add it later.
 
-[h1][b]Special Thanks:[/b][/h1]
-Blackout - for making Controlled Difficulty in the first place, and making the source readily available
-Kore - for helping test and debug
-Nam - for multiple bug reports and writing a guide in Korean
-Machine & Akathiiro313 - for writing a guide in Chinese
 
-[h1][b]Finding CD Players and Servers[/b][/h1]
-I've put together a small group to help people find public CD servers and groups to play with in their region. There's still a fair bit of information to fill out and if you'd like your group or server added to the lists provided please feel free to comment below the list in each section with the appropriate information.
+[h1]Special Thanks[/h1]
 
-https://steamcommunity.com/groups/CD_Players_Hub
-
-[h1][b]IMPORTANT[/b][/h1]
-Please don't randomly add me on steam for questions or support. Instead ask here in the comments below, or start a discussion in the discussions section for this mod.
+Blackout and Tiger for making this everyone's favourited mutator, as i said above i don't own most of the credit of this version of CD, it's their effort that brought us this wonderful mutator.
+DarkDarkington for keeping Tiger's source code and keeping CD running.
+Machine [strike]for being GOD[/strike] for testing this mutator.
+Everyone from Trolling Squad, this version of CD is cretaed to in memory of our good old days.
