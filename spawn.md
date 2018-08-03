@@ -109,12 +109,15 @@ The following zed names are accepted in `SpawnCycleDefs`:
 * F(LESHPOUND), FP
 * G(OREFAST), GF
 * H(USK)
-* KI(NGFLESHPOUND), KF, KFP (EXPERIMENTAL, might be changed or removed)
 * MI(NIFLESHPOUND), MF, MFP
 * SC(RAKE)
 * SI(REN)
 * SL(ASHER), CS, ClotS
 * ST(ALKER)
+* DARE(MP), DE, TR, Trapper
+* DARR(OCKET), DR, BO, Boomer
+* DARL(ASER), DL, BA, Blaster
+* no longer supports KFP 'cause blackout removed it.
 
 Letters in parentheses may be omitted or shortened on the right.  All zed names are completely case-insensitive.
 
@@ -143,10 +146,14 @@ At the time this document was last updated, there are several albino zed variant
 * AL(PHA)\*, CA\*, ClotA\* (Albino Alpha Clot)
 * CR(AWLER)\* (Albino Crawler)
 * G(OREFAST)\*, GF* (Albino Gorefast -- two blades)
+* ST(ALKER)\* (EDARs variants)
+* HU(SK)\* (EDARs variants)
 
 The asterisk suffix makes these zeds albino/special.  For example, "Crawler\*" would spawn a gas grawler and "AL\*" would spawn an albino alpha clot.  Appending a * character to a zed that has no albino variant generates an error message and causes the SpawnCycle to be rejected.
 
-When CD's `AlbinoCrawlers`, `AlbinoAlphas`, and `AlbinoGorefasts` options are set to false, the associated zed albino type cannot spawn, even if the SpawnCycle says so.  When those options are set to true, the associated albino zed type spawns whenever the SpawnCycle dictates.  If the SpawnCycle does not include any albino zeds, then none will spawn even if one of the `Albino...` options is set to true.
+When CD's `AlbinoCrawlers`, `AlbinoAlphas`, `AlbinoStalkers`, `AlbinoHusks` and `AlbinoGorefasts` options are set to false, the associated zed albino type cannot spawn, even if the SpawnCycle says so.  When those options are set to true, the associated albino zed type spawns whenever the SpawnCycle dictates.  If the SpawnCycle does not include any albino zeds, then none will spawn even if one of the `Albino...` options is set to true.
+
+For EDARs, there are currently two ways to spawn them in spawncycle, you can either use the specified names to spawn specific EDAR but you can not disable them via chat command, or you can use "ST\*" and "HU\*" to spawn random EDARs while you can disable them via chat command.
 
 ### Fleshpounds that Rage at Spawntime
 
