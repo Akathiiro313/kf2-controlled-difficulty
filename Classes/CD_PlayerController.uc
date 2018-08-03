@@ -133,5 +133,5 @@ defaultproperties
 {
 	MatchStatsClass=class'ControlledDifficulty.CD_EphemeralMatchStats'
 	bIsReadyForNextWave=false
-	CDEchoMessageColor="9900ff"
+	CDEchoMessageColor="FF1493"
 }
