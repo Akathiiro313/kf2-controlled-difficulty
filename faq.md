@@ -1,8 +1,8 @@
 # Frequently Asked Questions
 
-### How does Tiger's Build of CD relate to Blackout's CD, Skell's Faked Suite and Project One mods?
+### How does this branch of CD relate to Tiger's Build of CD and Blackout's CD, Skell's Faked Suite and Project One mods?
 
-Blackout made Controlled Difficulty after P1 went unmaintained, but before Skell returned to make his Faked Suite. There was significant feature overlap, though some things are unique on each side. While both mods were good for a time, Skell has since removed the Faked Suite from the workshop. With Project One not maintained, Skell's FakedSuite removed, and Blackout busy with real life, currently ControlledDifficulty - Tiger's Build is the most actively maintained mutator that offers FakedPlayers functionality. This may change at some point in the future.
+Blackout made Controlled Difficulty after P1 went unmaintained, but before Skell returned to make his Faked Suite. There was significant feature overlap, though some things are unique on each side. While both mods were good for a time, Skell has since removed the Faked Suite from the workshop. With Project One not maintained, Skell's FakedSuite removed, and Blackout busy with real life, currently ControlledDifficulty - Tiger's Build is the most actively maintained mutator that offers FakedPlayers functionality. Since Tiger has quited the game too, CD becomes unmaintained, I just try to fix some breakages to maintained CD's fuction until one day DarkDarkington or Blackout return to maintain it or until I encounter some severe breakage which I am not able to fix.
 
 ### Does CD modify my vanilla KF2?
 
@@ -19,9 +19,9 @@ By saving its settings to only these sections, CD actively avoids touching setti
 
 ### Where can I get KF-Hillside?
 
-Skell has removed Hillside from the workshop, and while it can still be downloaded by other means, it doesn't seem appropriate to list those here.
+Skell has removed Hillside from the workshop, and while it can still be downloaded by other means, it doesn't seem appropriate to list those here. (Sadly Kore has quited the game too with his many long lane solo maps gone.)
 
-CD works with any map, not just Hillside. If you're looking for a good single lane- aim practice map, Kore's SubTheWub and  FatCat's Corridor are good alternatives to hillside.
+CD works with any map, not just Hillside. If you're looking for a good single lane- aim practice map, FatCat's Corridor is good alternative to hillside.
 
 ### Can I level up my perks in CD?
 
@@ -39,15 +39,12 @@ I've been asked this a few times now and the simple answer is, I have no idea. W
 
 Personally, I would actually be quite happy if he merged my changes into his build completely outmoding mine in the process and leaving me free of the responsibility of maintaining and supporting it.
 
-### Will you be adding anything else ?
-I have a few more features in mind but setting aside the time to add them and having the will to do so is another thing entirely.
-
-### Why'd you make this custom version?
-This custom build actually came about off the cuff when Kore was asking for help with his cdautopause mutator and after rewriting one small function for him we were talking about the different ways he could go with it. I decided the best way to implement it would be to just add it to CD. With some talk about the old cdready suggestion- i figured if i was doing autopause I might as well do cdready too. Things have sort of spiraled out from there. It's funny really, starting this i had no plans to even compile it myself, much less release it to workshop.
 
 ### Can I use this for x?
 
-While I did not ask permission to make this variant as I'm sure Blackout would've preferred in keeping with the standards he's set I've made sure the source is open and freely available and ask only that whatever you do with it, you do not use it for monetary gain. It would also be really awesome if you credited Blackout for the tremendous amount of time and energy he's put into making CD in the first place. If you're using something I've added to this version like AutoPause or stats, or the ready system, etc. in another mod- You can credit me too if you really want, but I don't require credit.
+"While I did not ask permission to make this variant as I'm sure Blackout would've preferred in keeping with the standards he's set I've made sure the source is open and freely available and ask only that whatever you do with it, you do not use it for monetary gain. It would also be really awesome if you credited Blackout for the tremendous amount of time and energy he's put into making CD in the first place. If you're using something I've added to this version like AutoPause or stats, or the ready system, etc. in another mod- You can credit me too if you really want, but I don't require credit." -By Tiger 
+
+I didn't do much for CD other than fix some bugs so i don't really take any credit for this, but still some people might be cranky for me changing the name to Akathiiro313's build.
 
 ### Will you try to get TWI to whitelist this build of CD?
 
